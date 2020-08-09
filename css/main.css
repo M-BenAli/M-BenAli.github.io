@@ -174,31 +174,83 @@ textarea {
   clear: both;
 }
 
+/* Background */
+.stars, .twinkling, .clouds {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.stars {
+  z-index: -1;
+  background: #000 url("https://image.ibb.co/mjnygo/stars.png") repeat top center;
+}
+
+.twinkling {
+  z-index: -1;
+  background: transparent url("https://image.ibb.co/ir1DE8/twinkling.png") repeat top center;
+  animation: move-twink-back 200s linear infinite;
+}
+
+
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+
 /* General */
 
 .page-template {
-  height: 100%;
+  height: 75%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
-/* About me page */
+.page-title {
+  width: 75%;
+  border-bottom: solid 1px white;
+  margin: 0 0 35px 10px;
+  color: white
+}
+
+a {
+  color: deepskyblue;
+}
+
+
+/* Main page */
 
 .main-content {
-  margin-top: 100px;
-  width: 50%;
-  height: 30%;
+  width: 45%;
+  height: 45%;
   border: solid 1px;
   border-radius: 10px;
   padding: 0 0 25px 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
+  background-color: white;
+  margin-top: 100px;
 }
 
 .image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  margin: 2px;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  margin: 5px 5px 5px 20px;
+  border: deepskyblue solid 2px;
 }
 
 .title {
@@ -212,11 +264,89 @@ textarea {
   padding: 10px;
 }
 
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto auto;
+}
+
+/* Project page */
+
+
+.projects-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.project-box {
+  border-radius: 5px;
+  flex-basis: 400px;
+  margin-left: 10px;
+  background-color: white;
+  padding: 10px;
+  border: deepskyblue solid 5px;
+}
+
+.project-title {
+  border-bottom: solid 1px black;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  /*background-color: #fafbfc;*/
+}
+
+.project-description {
+  border-bottom: 1px solid;
+  padding: 15px;
+  height: 275px;
+  overflow-y: auto;
+}
+
+.project-box .project-image {
+  padding: 5px;
+  border-bottom: solid black 1px;
+  height: 250px;
+}
+
+.project-image img {
+  width: 100%;
+}
+
+.project-links {
+  padding: 5px;
+}
+
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media only screen and (max-width: 1440px) {
+  .main-content {
+    width: 60%;
+    height: 60%;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .projects-content {
+    flex-direction: column;
+  }
+
+
+  .project-box {
+    margin-top: 10px;
+  }
+
+  .main-content {
+    width: 90%;
+    height: 75%;
+  }
+}
+
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */

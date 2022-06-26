@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  min-height:100%;
 }
 
 html, body {
@@ -212,19 +213,20 @@ textarea {
 /* General */
 
 .page-template {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
   align-content: center;
-
+  overflow: auto;
 }
 
 .page-title {
   width: 75%;
   border-bottom: solid 1px white;
   margin: 0 0 35px 10px;
-  color: white
+  color: black;
 }
 
 a {
@@ -244,19 +246,21 @@ a {
   height: 45%;
   border: solid 1px;
   border-radius: 10px;
-  padding: 0 0 25px 0;
+  padding: 0 0 0px 0;
   margin-left: auto;
   margin-right: auto;
   overflow-y: auto;
   background-color: white;
   margin-top: 100px;
+  display: flex;
+  flex-direction: row;
 }
 
 .image {
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  margin: 5px 5px 5px 20px;
+  width: 200px;
+  height: 99%;
+  border-radius: 10px;
+  margin: 0px 0px 0xp 20px;
   border: deepskyblue solid 2px;
 }
 
@@ -273,8 +277,10 @@ a {
 
 .links {
   display: flex;
+  padding: 5px;
+  border-top: solid 1px black;
   justify-content: space-evenly;
-  margin: auto auto;
+  margin-top: 30%;
 }
 
 /* Project page */

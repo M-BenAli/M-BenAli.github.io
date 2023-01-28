@@ -176,38 +176,6 @@ textarea {
   clear: both;
 }
 
-/* Background */
-
-.stars, .twinkling, .clouds {
-  position: absolute;
-  display: block;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-}
-
-.stars {
-  z-index: -1;
-  background: #000 url("https://image.ibb.co/mjnygo/stars.png") repeat top center;
-}
-
-.twinkling {
-  z-index: -1;
-  background: transparent url("https://image.ibb.co/ir1DE8/twinkling.png") repeat top center;
-  animation: move-twink-back 200s linear infinite;
-}
-
-
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
 
 
 /* General */
@@ -215,7 +183,7 @@ textarea {
 .page-template {
   width: 100%;
   height: 100%;
-  background-color: lightgray;
+  background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -229,8 +197,25 @@ textarea {
   color: black;
 }
 
+.project-title h1, h2, h3 {
+  color: black !important;
+}
+
 a {
   color: deepskyblue;
+}
+
+p, a, ul, ol {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
 }
 
 .back-navigation {
@@ -242,14 +227,13 @@ a {
 /* Main page */
 
 .main-content {
-  width: 45%;
+  width: 60%;
   height: 45%;
   border: solid 1px;
   border-radius: 10px;
-  padding: 0 0 0px 0;
+  padding: 15px;
   margin-left: auto;
   margin-right: auto;
-  overflow-y: auto;
   background-color: white;
   margin-top: 100px;
   display: flex;
@@ -257,11 +241,16 @@ a {
 }
 
 .image {
-  width: 200px;
-  height: 99%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   margin: 0px 0px 0xp 20px;
   border: deepskyblue solid 2px;
+}
+
+.image-content {
+  width: 100%;
+  height: 100%;
 }
 
 .title {
@@ -269,10 +258,18 @@ a {
   background-color: #fafbfc;
   padding-bottom: 5px;
   border-bottom: solid 1px lightgrey;
+  margin-left: 10px;
+}
+
+.title h1 {
+  color: black;
+  display: inline;
+  margin-left: 20px;
 }
 
 .description {
   padding: 10px;
+  margin-left: 30px;
 }
 
 .links {
@@ -280,7 +277,7 @@ a {
   padding: 5px;
   border-top: solid 1px black;
   justify-content: space-evenly;
-  margin-top: 30%;
+  margin-top: 150px;
 }
 
 /* Project page */

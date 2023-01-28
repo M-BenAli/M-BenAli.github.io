@@ -4,29 +4,44 @@ layout: default
 <div class="page-title">
   <h1>About me</h1>
 </div>
-<div class="main-content">
-  <div class="image-content">
-    <img class="image" alt="profile-img" src="img/Profile_Picture.jpg">
+<div class="main-container">
+  <div class="intro-content">
+    <div class="image-content">
+      <img class="image" alt="profile-img" src="img/Profile_Picture.jpg">
+    </div>
+
+    <div>
+      <div class="title">
+        <h1>Mohamed Ben Ali</h1>
+      </div>
+      <div class="description">
+        <p style=" padding-bottom: 20px">Hi, I'm a software engineer based in Amsterdam.
+          I'm mainly involved in everything related to computer science.
+          Other fields/topics which I'm interested in are physics, electrical engineering, sustainable energy and
+          mathematics (occasionally).
+          Visit the links below to learn more about me and projects I've been involved in.</p>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="skills-content">
+    <h1>Skills</h1>
+    <div class="skills">
+    {% for skill in site.data.skills %}
+      <div class="pill-text"> {{ skill.name }} </div>
+    {% endfor %}
+  </div>
   </div>
 
-  <div>
-    <div class="title">
-      <h1>Mohamed Ben Ali</h1>
-    </div>
-    <div class="description">
-      <p style=" padding-bottom: 20px">Hi, I'm a software engineer based in Amsterdam.
-        I'm mainly involved in everything related to computer science.
-        Other fields/topics which I'm interested in are physics, electrical engineering, sustainable energy and
-        mathematics (occasionally).
-        Visit the links below to learn more about me and projects I've been involved in.</p>
-      <div class="links">
-        <a href="/projects">Projects</a>
-        |
-        <a href="https://github.com/M-BenAli" target="_blank"><img alt="GitHub link" src="img/GitHub-Mark-32px.png"></a>
-        |
-        <a href="https://nl.linkedin.com/in/mohamed-ben-ali-a56368175" target="_blank">
-          <img alt="Linkedin link" width="32" height="32" src="img/linkedin_icon.png"></a>
-      </div>
-    </div>
+  <div class="links">
+    <a href="/projects">Projects</a>
+    |
+    <a href="/blogs">Blogs</a>
+    |    
+    <a href="https://github.com/M-BenAli" target="_blank"><img alt="GitHub link" src="img/GitHub-Mark-32px.png"></a>
+    |
+    <a href="https://nl.linkedin.com/in/mohamed-ben-ali-a56368175" target="_blank">
+      <img alt="Linkedin link" width="32" height="32" src="img/linkedin_icon.png"></a>
   </div>
 </div>

@@ -329,16 +329,31 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
+   Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
 
 @media only screen and (max-width: 1440px) {
   .main-content {
-    width: 60%;
+    width: 75%;
   }
 
+}
+
+@media only screen and (max-width: 1300px) {
+  .main-content {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .links {
+    margin-top: 0;
+  }
+
+  .image-content {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
